@@ -1,0 +1,4 @@
+#log temp reading to the sqlite DB
+*/5 * * * * sudo /home/pi/temperature/temperature_sqlite.pl
+*/1 * * * * ping -c 1 192.168.1.1
+*/5 * * * * sudo perl /home/pi/scipts/checkwifi.pl
