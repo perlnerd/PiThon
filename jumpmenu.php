@@ -23,7 +23,7 @@ if($cache_result)
 {
 // Second User Request
 $demos_result=$cache_result;
-echo "Cache returned";
+//echo "Cache returned";
 }
 else
 {
@@ -39,7 +39,7 @@ print_r($demos_result);
   
 
 // 1200 Seconds
-echo "No Cache.  Creating now";
+//echo "No Cache.  Creating now";
 }
 
 // Result 
