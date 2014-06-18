@@ -5,13 +5,6 @@ CREATE TABLE onewire(serial, nickname);
 CREATE TABLE relay('tserial','relay');
 CREATE TABLE tempLog(tserial,temp,datestamp);
 CREATE TABLE tempSetting('tserial','temp');
-sqlite> .tables
-onewire      relay        tempLog      tempSetting
-sqlite> .schema
-CREATE TABLE onewire(serial, nickname);
-CREATE TABLE relay('tserial','relay');
-CREATE TABLE tempLog(tserial,temp,datestamp);
-CREATE TABLE tempSetting('tserial','temp');
 sqlite> .schema onewire
 CREATE TABLE onewire(serial, nickname);
 sqlite> .schema relay
