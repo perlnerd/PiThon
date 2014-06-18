@@ -28,18 +28,21 @@ border: 1px solid #ccc;
 width: 600px;
 height: 160px;
 overflow: hidden;
+z-index: 5;
 }
 #graphTwo {
 border: 1px solid #ccc;
 width: 600px;
 height: 160px;
 overflow: hidden;
+
 }
 #graphThree {
 border: 1px solid #ccc;
 width: 600px;
 height: 160px;
 overflow: hidden;
+
 }
 #graphFour {
 border: 1px solid #ccc;
@@ -47,11 +50,16 @@ width: 600px;
 height: 160px;
 overflow: hidden;
 margin-bottom: 5px;
+
 }
 
 .graphelement {
 background: url(ajax-loader-2.gif) no-repeat center center;
 }
+.loadingtext {
+
+}
+
 -->
 </style>
 <!--[if lt IE 9]>
@@ -97,6 +105,7 @@ function jumpto(x){
 <h3>Current Graphs for <em class="nickname"></em></h3>
 <div id="graphimages">
 <div class="graphelement" id="graphOne">
+<h2 class="loadingtext">Getting graph images</h2>
 </div>   
 <div class="graphelement" id="graphTwo">
 </div>   
@@ -130,6 +139,7 @@ $( document ).ready(function() {
       //$(this).css('display', 'none'); // .hide() doesn't work in Safari when the element isn't on the DOM already
         $(this).hide();
         $('#' + index).removeClass('graphelement').append(this);
+        $(".loadingtext").hide();
         $(this).fadeIn();
       }).error(function () {
       // notify the user that the image could not be loaded
